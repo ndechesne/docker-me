@@ -1,8 +1,7 @@
 FROM ubuntu:trusty
 MAINTAINER Nicolas Dechesne <nicolas.dechesne@linaro.org>
 
-RUN dpkg --add-architecture i386 && \
-    apt-get update && \
+RUN apt-get update && \
     apt-get install -yq \
     apt-utils \
     bash \
@@ -17,11 +16,8 @@ RUN dpkg --add-architecture i386 && \
     g++-multilib \
     gawk \
     git \
-    libc6-dev-i386 \
-    libcrypto++-dev:i386 \
     libncurses5-dev \
     libssl-dev \
-    libssl-dev:i386 \
     locales \
     lzop \
     man \
@@ -34,7 +30,6 @@ RUN dpkg --add-architecture i386 && \
     wget \
     x11-utils \
     xvfb \
-    zlib1g-dev:i386 \
     && rm -rf /var/lib/apt-lists/* \
     && echo "dash dash/sh boolean false" | debconf-set-selections \
     && DEBIAN_FRONTEND=noninteractive dpkg-reconfigure dash
