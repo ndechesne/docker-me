@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM debian:buster
 MAINTAINER Nicolas Dechesne <nicolas.dechesne@linaro.org>
 
 RUN dpkg --add-architecture i386 && \
