@@ -23,6 +23,7 @@ RUN dpkg --add-architecture i386 && \
     libssl-dev \
     libssl-dev:i386 \
     locales \
+    lsb-release \
     lzop \
     man \
     procps \
@@ -31,6 +32,7 @@ RUN dpkg --add-architecture i386 && \
     screen \
     sudo \
     texinfo \
+    vim \
     wget \
     x11-utils \
     xvfb \
