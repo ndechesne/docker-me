@@ -40,6 +40,8 @@ RUN useradd -ms /bin/bash -p me me && \
 RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && \
     locale-gen
 
+RUN echo "%sudo ALL=(ALL:ALL) NOPASSWD:ALL" > /etc/sudoers.d/10-nopassword
+
 ENV LANG en_US.utf8
 
 USER me
