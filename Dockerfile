@@ -19,6 +19,7 @@ RUN apt-get update && \
     libncurses5-dev \
     libssl-dev \
     locales \
+    lsb-release \
     lzop \
     man \
     procps \
@@ -27,6 +28,7 @@ RUN apt-get update && \
     screen \
     sudo \
     texinfo \
+    vim \
     wget \
     x11-utils \
     xvfb \
