@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+FROM ubuntu:eoan
 MAINTAINER Nicolas Dechesne <nicolas.dechesne@linaro.org>
 
 RUN apt-get update && \
