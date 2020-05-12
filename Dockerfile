@@ -1,4 +1,4 @@
-FROM ubuntu:trusty
+FROM ubuntu:xenial
 MAINTAINER Nicolas Dechesne <nicolas.dechesne@linaro.org>
 
 RUN apt-get update && \
