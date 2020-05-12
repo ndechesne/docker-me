@@ -11,31 +11,50 @@ RUN dpkg --add-architecture i386 && \
     build-essential \
     chrpath \
     cpio \
+    dblatex \
+    debianutils \
     diffstat \
+    docbook-utils \
     dos2unix \
     doxygen \
+    fop \
     g++-multilib \
     gawk \
+    gcc-multilib \
     git \
+    iputils-ping \
     libc6-dev-i386 \
     libcrypto++-dev:i386 \
+    libegl1-mesa \
     libncurses5-dev \
+    libsdl1.2-dev \
     libssl-dev \
     libssl-dev:i386 \
     locales \
     lsb-release \
     lzop \
     man \
+    make \
     procps \
+    pylint3 \
     python \
     python3 \
+    python3-git \
+    python3-jinja2 \
+    python3-pexpect \
+    python3-pip \
     screen \
+    socat \
     sudo \
     texinfo \
+    unzip \
     vim \
     wget \
     x11-utils \
+    xmlto \
+    xsltproc \
     xvfb \
+    xz-utils \
     zlib1g-dev:i386 \
     && rm -rf /var/lib/apt-lists/* \
     && echo "dash dash/sh boolean false" | debconf-set-selections \
