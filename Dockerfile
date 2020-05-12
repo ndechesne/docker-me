@@ -10,28 +10,47 @@ RUN apt-get update && \
     build-essential \
     chrpath \
     cpio \
+    dblatex \
+    debianutils \
     diffstat \
+    docbook-utils \
     dos2unix \
     doxygen \
+    fop \
     g++-multilib \
     gawk \
+    gcc-multilib \
     git \
+    iputils-ping \
+    libegl1-mesa \
     libncurses5-dev \
+    libsdl1.2-dev \
     libssl-dev \
     locales \
     lsb-release \
     lzop \
     man \
+    make \
     procps \
+    pylint3 \
     python \
     python3 \
+    python3-git \
+    python3-jinja2 \
+    python3-pexpect \
+    python3-pip \
     screen \
+    socat \
     sudo \
     texinfo \
+    unzip \
     vim \
     wget \
     x11-utils \
+    xmlto \
+    xsltproc \
     xvfb \
+    xz-utils \
     && rm -rf /var/lib/apt-lists/* \
     && echo "dash dash/sh boolean false" | debconf-set-selections \
     && DEBIAN_FRONTEND=noninteractive dpkg-reconfigure dash
