@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM ubuntu:focal
 MAINTAINER Nicolas Dechesne <nicolas.dechesne@linaro.org>
 
 RUN apt-get update && \
