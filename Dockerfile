@@ -1,6 +1,11 @@
 FROM debian:buster
 MAINTAINER Nicolas Dechesne <nicolas.dechesne@linaro.org>
 
+# default args
+ARG USER=me
+ARG UID=1000
+ARG GID=1000
+
 RUN dpkg --add-architecture i386 && \
     apt-get update && \
     apt-get install -yq \
@@ -60,8 +65,8 @@ RUN dpkg --add-architecture i386 && \
     && echo "dash dash/sh boolean false" | debconf-set-selections \
     && DEBIAN_FRONTEND=noninteractive dpkg-reconfigure dash
 
-RUN useradd -ms /bin/bash -p me me && \
-	usermod -aG sudo me
+RUN useradd -ms /bin/bash -p ${USER} -u ${UID} ${USER} && \
+	usermod -aG sudo ${USER}
 
 RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && \
     locale-gen
@@ -70,5 +75,5 @@ RUN echo "%sudo ALL=(ALL:ALL) NOPASSWD:ALL" > /etc/sudoers.d/10-nopassword
 
 ENV LANG en_US.utf8
 
-USER me
-WORKDIR /home/me
+USER ${UID}:${GID}
+WORKDIR /home/${USER}
