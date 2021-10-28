@@ -5,6 +5,10 @@ MAINTAINER Nicolas Dechesne <nicolas.dechesne@linaro.org>
 ARG USER=me
 ARG UID=1000
 ARG GID=1000
+ARG TZ=Europe/Paris
+
+ENV TZ=${TZ}
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN dpkg --add-architecture i386 && \
     apt-get update && \
