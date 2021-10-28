@@ -39,6 +39,7 @@ RUN dpkg --add-architecture i386 && \
     libsdl1.2-dev \
     libssl-dev \
     libssl-dev:i386 \
+    liblz4-tool \
     locales \
     lsb-release \
     lzop \
@@ -65,6 +66,7 @@ RUN dpkg --add-architecture i386 && \
     xvfb \
     xz-utils \
     zlib1g-dev:i386 \
+    zstd \
     && rm -rf /var/lib/apt-lists/* \
     && echo "dash dash/sh boolean false" | debconf-set-selections \
     && DEBIAN_FRONTEND=noninteractive dpkg-reconfigure dash
